@@ -5,8 +5,8 @@ using UnityEngine;
 public class DetectItem : MonoBehaviour
 {
     public List<ItemInventory> inventory;
-    public Special hover;
-    [SerializeField] private List<Special> nearspecials;
+    public Controller parent;
+    [SerializeField] public List<Special> nearspecials;
     [SerializeField] private GameObject text;
     // Start is called before the first frame update
     void Start()
@@ -21,23 +21,14 @@ public class DetectItem : MonoBehaviour
     void Update()
     {
         int i = 0;
-        hover = null;
         while (i< nearspecials.Count)
         {
-            if (nearspecials[i].GetComponent<BoxCollider2D>().Distance(GetComponent<Collider2D>()).distance > 0)
+            if (nearspecials[i] == null || nearspecials[i].GetComponent<BoxCollider2D>().Distance(GetComponent<Collider2D>()).distance > 0)
             {
                 nearspecials.Remove(nearspecials[i]);
             }
             else
             {
-                if (nearspecials[i].GetComponent<BoxCollider2D>().OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
-                {
-                    if (hover == null || hover.transform.position.z > nearspecials[i].transform.position[i])
-                    {
-                        hover = nearspecials[i];
-
-                    }
-                }
                 ++i;
             }
         }
@@ -46,6 +37,7 @@ public class DetectItem : MonoBehaviour
     {
         if (!collision.isTrigger && collision.GetComponent(typeof(Item)) != null)
         {
+            parent.audio.PlayOneShot((Random.value * 2 > 1) ? ((AudioClip)Resources.Load("Sound/Take1")) : ((AudioClip)Resources.Load("Sound/Take2")));
             Item item = collision.GetComponent(typeof(Item)) as Item;
             if (inventory.Exists(x => x.item.name == item.name))
             {
@@ -57,7 +49,7 @@ public class DetectItem : MonoBehaviour
             collision.gameObject.SetActive(false);
             Instantiate(text,transform);
         }
-        else if(!collision.isTrigger && collision.GetComponent(typeof(Special)) != null)
+        else if(collision.GetComponent(typeof(Special)) != null)
         {
             Special item = collision.GetComponent(typeof(Special)) as Special;
             nearspecials.Add(item);

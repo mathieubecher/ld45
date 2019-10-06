@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 148034895604943843}
   - component: {fileID: 2277490207999437158}
   - component: {fileID: 4591076300089222889}
+  - component: {fileID: 7848478921749359991}
   m_Layer: 8
   m_Name: Stone
   m_TagString: Untagged
@@ -183,7 +184,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.42384666, y: 0.37418142}
-    oldSize: {x: 0.85, y: 0.85}
+    oldSize: {x: 0.9, y: 0.85}
     newSize: {x: 0.17, y: 0.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -204,11 +205,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2261c6346ee25418d08390f8ea466e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mindrop: 1
-  maxdrop: 3
+  mindrop: 3
+  maxdrop: 4
   drops:
   - item: {fileID: 2012485756106534520, guid: 0cca193832962f342938e0cbb79c1801, type: 3}
-    dropchance: 1
+    dropchance: 8
+  - item: {fileID: 2767702536066308772, guid: b584e87aafc763645a09a2a9db7a5ce3, type: 3}
+    dropchance: 0.5
+  type: 0
+  resistance: 3
 --- !u!60 &4591076300089222889
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -226,7 +231,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.42384666, y: 0.37418142}
-    oldSize: {x: 0.85, y: 0.85}
+    oldSize: {x: 0.9, y: 0.85}
     newSize: {x: 0.17, y: 0.17}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -246,3 +251,15 @@ PolygonCollider2D:
       - {x: 0.4937216, y: -0.04453972}
       - {x: 0.49372172, y: 0.2086482}
       - {x: 0.3260858, y: 0.37229252}
+--- !u!114 &7848478921749359991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732078711001254030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94fc59af8cc70ad4898bf9bcba814646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

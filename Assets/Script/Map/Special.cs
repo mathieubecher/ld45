@@ -5,6 +5,9 @@ using UnityEngine;
 public class Special : MonoBehaviour
 {
     public string name;
+    public bool physic = true;
+    public bool placable = true;
+    public List<CaseType> typesAccept;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +18,9 @@ public class Special : MonoBehaviour
     void Update()
     {
         
+    }
+    public virtual void ActionRelease(Controller parent)
+    {
+
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum ObjectType
 {
-    STONE,WOOD
+    STONE,WOOD,PLANT
 }
 public class Object : MonoBehaviour
 {
@@ -30,17 +30,20 @@ public class Object : MonoBehaviour
             timeShake = 0.02f;
             if (value <= 0)
             {
+                if (resistance - value >= 1)maxdrop = maxdrop * 2;
                 (Camera.main.GetComponent(typeof(Effect)) as Effect).ScreenShake((resistance-value)*2);
                 for(int i = 0; i < (int)Mathf.Floor(Random.value * (maxdrop - mindrop) + mindrop); ++i)
                 {
 
                     int item = 0;
                     float allproba = Random.value * GetAllProba();
+
                     while(item < drops.Count && allproba > 0)
                     {
                         allproba -= drops[item].dropchance;
                         if (allproba > 0) ++item;
                     }
+                    
                     GameObject g = Instantiate(drops[item].item, this.transform.position, Quaternion.identity);
                     g.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.value * 2 - 1, Random.value * 2 - 1).normalized * (resistance - value) *20,ForceMode2D.Impulse);
                 }
@@ -73,7 +76,7 @@ public class Object : MonoBehaviour
     {
         if (timeShake > 0) timeShake -= Time.deltaTime;
         else shake = Vector3.zero;
-        transform.localPosition = originalPos + shake;
+        transform.localPosition = new Vector3(originalPos.x + shake.x,originalPos.y + shake.y,transform.localPosition.z);
     }
     public void Show(float height)
     {

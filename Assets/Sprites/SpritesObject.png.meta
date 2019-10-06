@@ -14,6 +14,21 @@ TextureImporter:
   - first:
       213: -7662570962165500675
     second: SpritesObject_3
+  - first:
+      213: 1194941048266562538
+    second: SpritesObject_4
+  - first:
+      213: 586925096633691384
+    second: SpritesObject_5
+  - first:
+      213: 2164074592551581988
+    second: SpritesObject_6
+  - first:
+      213: 513780079034059832
+    second: SpritesObject_7
+  - first:
+      213: -2433582960170744945
+    second: SpritesObject_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -73,8 +88,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -85,8 +100,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -97,8 +112,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Windows Store Apps
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -109,8 +124,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: tvOS
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -121,8 +136,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -133,8 +148,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Lumin
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -145,8 +160,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -157,8 +172,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -174,8 +189,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 33
-        width: 17
+        y: 83
+        width: 18
         height: 17
       alignment: 9
       pivot: {x: 0.42384666, y: 0.37418142}
@@ -195,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 21
-        y: 33
+        y: 83
         width: 17
         height: 9
       alignment: 0
@@ -216,11 +231,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
+        y: 51
         width: 26
         height: 29
       alignment: 9
-      pivot: {x: 0.5000001, y: -0.0027037098}
+      pivot: {x: 0.48051602, y: 0.09434335}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,7 +252,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 29
-        y: 1
+        y: 51
         width: 15
         height: 7
       alignment: 0
@@ -249,6 +264,111 @@ TextureImporter:
       bones: []
       spriteID: 0f1c3b63e861be341b8038d904e7bd72
       internalID: -7662570962165500675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesObject_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 74
+        width: 24
+        height: 26
+      alignment: 9
+      pivot: {x: 0.47654724, y: 0.3094899}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb4f676d184a784cb61b25233a3238b
+      internalID: 1194941048266562538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesObject_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 47
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6db56d90ff1dd4aba7472b4162ba90
+      internalID: 586925096633691384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesObject_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 80
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93703f35a7dda1342b3f4592b5d25959
+      internalID: 2164074592551581988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesObject_7
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 79
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4d484208661714fa3d63201913244c
+      internalID: 513780079034059832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpritesObject_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 48
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1596803f83e96bd47b0787cbe6b02ced
+      internalID: -2433582960170744945
       vertices: []
       indices: 
       edges: []

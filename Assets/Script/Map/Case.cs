@@ -17,6 +17,7 @@ public class Case : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Collider2D>().enabled = false;
         GetComponent<SpriteRenderer>().color = new Color(1, 1, 1,height);
         for (int i = 0; i < transform.childCount; ++i)
         {
@@ -39,6 +40,7 @@ public class Case : MonoBehaviour
             {
                 height = 1;
                 Destroy(neighbour);
+                GetComponent<Collider2D>().enabled = true;
                 for (int i = 0; i < transform.childCount; ++i)
                 {
                     if (transform.GetChild(i).GetComponent<Collider2D>() != null)

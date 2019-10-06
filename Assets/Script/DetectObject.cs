@@ -43,7 +43,7 @@ public class DetectObject : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!collision.isTrigger && collision.GetComponent(typeof(Object)) != null)
+        if(collision is BoxCollider2D && collision.GetComponent(typeof(Object)) != null)
             rangeobjects.Add(collision.GetComponent(typeof(Object)) as Object);
     }
 }
