@@ -12,8 +12,12 @@ public class Hold : State
     public Hold(Controller parent, Special hold):base(parent)
     {
         parent.audio.PlayOneShot((AudioClip)Resources.Load("Sound/" + ((Random.value * 2 > 1) ? "Hold1" : "Hold2")));
-        if (hold.transform.childCount > 0)
+        if (hold.transform.childCount > 0 && hold.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>()!= null)
             hold.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().color = new Color(1,1,1,0);
+        else if(hold.transform.childCount > 0)
+        {
+            Object.Destroy(hold.transform.GetChild(0).gameObject);
+        }
         this.hold = hold;
         this.hold.GetComponent<Collider2D>().enabled = false;
         hold.transform.SetParent(parent.transform);

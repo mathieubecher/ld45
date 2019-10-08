@@ -17,7 +17,7 @@ public class Controller : MonoBehaviour
     public float originforce = 0.5f;
     private float food = 5;
     public float energy = 5;
-    public float life = 5;
+    private float life = 5;
     public AudioSource audio;
     public bool pickaxe = false;
     public bool axe = false;
@@ -28,6 +28,15 @@ public class Controller : MonoBehaviour
             food = value;
             if (food < 0) food = 0;
             else if (food > 5) food = 5;
+        }
+    }
+    public float Life
+    {
+        get => life; set
+        {
+            life = value;
+            if (life < 0) life = 0;
+            else if (life > 5) life = 5;
         }
     }
 
@@ -48,7 +57,9 @@ public class Controller : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) state.Click();
         else if (Input.GetKeyDown(KeyCode.E)) state.E();
         if (Input.GetMouseButtonDown(1)) state.RightClic();
-        this.Food -= Time.deltaTime/50;
+
+        this.Food -= Time.deltaTime / 20;
+        if (this.Food <= 0) Life -= Time.deltaTime / 10;
 
 
     }

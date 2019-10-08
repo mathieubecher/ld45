@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class DetectItem : MonoBehaviour
 {
+
     public List<ItemInventory> inventory;
     public Controller parent;
     [SerializeField] public List<Special> nearspecials;
     [SerializeField] private GameObject text;
+    public GameObject holdInfo;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,10 @@ public class DetectItem : MonoBehaviour
         {
             if (nearspecials[i] == null || nearspecials[i].GetComponent<BoxCollider2D>().Distance(GetComponent<Collider2D>()).distance > 0)
             {
+                if (holdInfo != null) Destroy(holdInfo);
                 nearspecials.Remove(nearspecials[i]);
+                if (nearspecials.Count > 0) holdInfo = Instantiate((GameObject)Resources.Load("Text/Hold"), nearspecials[0].transform);
+                
             }
             else
             {
@@ -53,6 +58,8 @@ public class DetectItem : MonoBehaviour
         {
             Special item = collision.GetComponent(typeof(Special)) as Special;
             nearspecials.Add(item);
+            if (holdInfo != null) Destroy(holdInfo);
+            holdInfo = Instantiate((GameObject)Resources.Load("Text/Hold"), nearspecials[0].transform);
         }
             
 

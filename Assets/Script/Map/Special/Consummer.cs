@@ -17,7 +17,7 @@ public class Consummer : Special
         base.ActionRelease(parent);
         parent.Food += food;
         parent.energy += energy;
-        parent.life += life;
+        parent.Life += life;
     }
 
 

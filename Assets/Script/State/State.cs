@@ -53,8 +53,9 @@ public class State
     public virtual void E() { 
         if (parent.detectItem.nearspecials.Count > 0)
         {
-
+            
             Hold(parent.detectItem.nearspecials[0]);
+           
         }
     }
     public virtual void RightClic() { }

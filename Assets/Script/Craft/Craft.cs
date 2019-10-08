@@ -53,6 +53,9 @@ public class Craft : MonoBehaviour
         for (int i = 0; i < plan.plan.Count; ++i)
         {
             GameObject g = Instantiate(craftitem, hoverInfo.transform);
+            (g.GetComponent(typeof(CraftItem)) as CraftItem).itemName = plan.plan[i].item.name;
+            (g.GetComponent(typeof(CraftItem)) as CraftItem).number = plan.plan[i].number;
+            (g.GetComponent(typeof(CraftItem)) as CraftItem).items = parent.player.detectItem;
             g.GetComponent<Image>().sprite = plan.plan[i].item.GetComponent<SpriteRenderer>().sprite;
             g.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "" + plan.plan[i].number;
             g.GetComponent<RectTransform>().anchoredPosition = new Vector2(g.GetComponent<RectTransform>().anchoredPosition.x + 50 * i, g.GetComponent<RectTransform>().anchoredPosition.y);
@@ -61,7 +64,7 @@ public class Craft : MonoBehaviour
         }
 
         float size = text.GetTextInfo(text.text).textComponent.GetPreferredValues().x+20;
-        hoverInfo.GetComponent<RectTransform>().sizeDelta = new Vector2(( 50 * (plan.plan.Count)> size) ? (50 * (plan.plan.Count)) : size +20, hoverInfo.GetComponent<RectTransform>().sizeDelta.y);
+        hoverInfo.GetComponent<RectTransform>().sizeDelta = new Vector2(( 60 * (plan.plan.Count)> size) ? (60 * (plan.plan.Count)) : size +20, hoverInfo.GetComponent<RectTransform>().sizeDelta.y);
         hoverInfo.SetActive(false);
     }
 
